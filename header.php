@@ -8,4 +8,12 @@
     <title><?= $title ? $title : '' ?></title>
 </head>
 <body>
+    <header>Непознатата България</header>
+    <nav>
+        <ul>
+            <li><a href="#">Начало</a></li>
+            <li><a href="#">Правила</a></li>
+        </ul>
+    </nav>
+    <main>
     
