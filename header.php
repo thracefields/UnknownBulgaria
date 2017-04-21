@@ -15,17 +15,19 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
 
     <!-- JS -->
 </head>
 <body>
-    <header>Непознатата България</header>
-    <nav>
-        <ul>
-            <li><a href="#">Начало</a></li>
-            <li><a href="#">Правила</a></li>
-        </ul>
-    </nav>
-    <main>
+    <div class="container">
+        <header>Непознатата България</header>
+        <nav>
+            <ul>
+                <li><a href="/">Начало</a></li>
+                <li><a href="login.php">Влез</a></li>
+                <li><a href="register.php">Регистрирай се</a></li>
+            </ul>
+        </nav>
+        <main>
     

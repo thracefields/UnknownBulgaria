@@ -1,0 +1,11 @@
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.game-container {
+    min-height: 600px;
+    background-image: url("../images/main-background.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+}
