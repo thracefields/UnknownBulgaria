@@ -1,0 +1,18 @@
+{
+  "name": "UnknownBulgaria",
+  "homepage": "https://github.com/thracefields/UnknownBulgaria",
+  "authors": [
+    "thracefields <thracefields@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./assets/bower_components",
+    "test",
+    "tests"
+  ]
+}
