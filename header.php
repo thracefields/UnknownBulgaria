@@ -22,11 +22,11 @@
 <body>
     <div class="container">
         <header>Непознатата България</header>
-        <nav>
-            <ul>
-                <li><a href="/">Начало</a></li>
-                <li><a href="login.php">Влез</a></li>
-                <li><a href="register.php">Регистрирай се</a></li>
+        <nav class="pure-menu pure-menu-horizontal space">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="/">Начало</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="login.php">Влез</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="register.php">Регистрирай се</a></li>
             </ul>
         </nav>
         <main>
