@@ -17,6 +17,7 @@
     <!--<![endif]-->
     <link rel="stylesheet" href="./assets/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/vendor/parsley.css">
+    <link rel="stylesheet" href="./assets/css/vendor/animate.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 
     <!-- JS -->
@@ -24,7 +25,7 @@
 </head>
 <body>
     <div class="container">
-        <header>Непознатата България</header>
+        <header><img class="logo" src="./assets/images/logo.png"></header>
         <nav class="main-navigation">
             <ul>
                 <li><a href="/"><i class="fa fa-compass fa-2x" aria-hidden="true"></i><span>Начало</span></a></li>

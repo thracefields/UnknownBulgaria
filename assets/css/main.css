@@ -22,6 +22,11 @@ body {
     box-shadow: 0 0 20px #000;
 }
 
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
 header {
     background-image: url("../images/header-background.png");
     background-size: 100% 100%;
@@ -106,3 +111,17 @@ nav.main-navigation span {
 .alert-danger {
   background-color: #f44336;
 }
+
+.logo {
+  width: 330px;
+  height: 220px;
+  opacity: 0.9;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.logo:hover {
+  animation-name: spin;
+  animation-duration: 1s;
+  opacity: 0.8;
+}
+
