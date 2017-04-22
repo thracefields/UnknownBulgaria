@@ -28,7 +28,7 @@
                                 <!--<button type="submit" class="pure-button pure-button-primary">
                                     Регистрирайте се
                                 </button>-->
-                                <input type="submit" name="submit" value="Изпрати">
+                                <button type="submit" name="submit">Изпрати</button>
                             </fieldset>
                             
                             <?php 
