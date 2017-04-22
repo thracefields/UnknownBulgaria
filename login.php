@@ -36,7 +36,8 @@
                                 $a = mysqli_fetch_assoc($search);
                                 if(password_verify($password, $a['password']) && $email === $a['email']) {
                                     session_start();
-                                    $_SESSION['username'] = $username;
+                                    $_SESSION['name'] = $a['name'];
+                                    $_SESSION['is_logged'] = 1;
                                     $_SESSION['success'] = 'Успешно влязохте.';
                                     header('Location: /');
                                 } else {

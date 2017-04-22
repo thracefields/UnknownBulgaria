@@ -1,18 +1,25 @@
+html{box-sizing:border-box}
+*,:after,:before{box-sizing:inherit}
+
 body {
-    /*background-image: url("../images/background.jpg");*/
-    background-size: cover;
+    background-image: url("../images/background-1.jpg");
+    background-size: 100% 100%;
     background-attachment: fixed;
 }
 
 .container {
     width: 1100px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 0 20px #000;
 }
 
 header {
-    /*background-image: url("../images/header-background.png");*/
+    background-image: url("../images/header-background.png");
     background-size: 100% 100%;
     min-height: 260px;
+    border-radius: 20px;
 }
 
 .game-container {

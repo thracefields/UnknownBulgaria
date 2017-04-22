@@ -25,10 +25,7 @@
                             </fieldset>
 
                             <fieldset>
-                                <!--<button type="submit" class="pure-button pure-button-primary">
-                                    Регистрирайте се
-                                </button>-->
-                                <button type="submit" name="submit">Изпрати</button>
+                                <button class="pure-button pure-button-primary" name="submit" type="submit">Регистрирайте се</button>
                             </fieldset>
                             
                             <?php 

@@ -1,6 +1,4 @@
 <?php
-   if (isset($_POST['submit'])) {
-     session_destroy();
-     header('Location: /');
-   }
-  ?>
+session_start();
+unset($_SESSION['name']);  
+header('Location: index.php');
