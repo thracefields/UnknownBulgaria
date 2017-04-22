@@ -15,22 +15,29 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
     <!--<![endif]-->
+    <link rel="stylesheet" href="./assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/vendor/parsley.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 
     <!-- JS -->
+   
 </head>
 <body>
     <div class="container">
         <header>Непознатата България</header>
-        <nav class="pure-menu pure-menu-horizontal space">
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a class="pure-menu-link" href="/">Начало</a></li>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="/"><i class="fa fa-compass fa-2x" aria-hidden="true"></i><span>Начало</span></a></li>
                 <?php if(empty($_SESSION['name']) && !isset($_SESSION['is_logged'])): ?>
-                    <li class="pure-menu-item"><a class="pure-menu-link" href="login.php">Влез</a></li>
-                    <li class="pure-menu-item"><a class="pure-menu-link" href="register.php">Регистрирай се</a></li>
+                    <li><a href="login.php"><i class="fa fa-flag fa-2x" aria-hidden="true"></i><span>Влез</span></a></li>
+                    <li><a href="register.php"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i><span>Регистрация</span></a></li>
                 <?php endif; ?>
-                <li class="pure-menu-item"><a class="pure-menu-link" href="#">Класации</a></li>
+                 <?php if(isset($_SESSION['name']) && isset($_SESSION['is_logged'])): ?>
+                    <li><a href="game.php"><i class="fa fa-flag fa-2x" aria-hidden="true"></i><span>Игрa</span></a></li>
+                <?php endif; ?>
+                <li><a href="#"><i class="fa fa-tags fa-2x" aria-hidden="true"></i><span>Класации</span></a></li>
             </ul>
         </nav>
         <main>
+            <!--<img src="./assets/images/maps-icon.png">-->
     

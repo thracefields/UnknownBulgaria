@@ -17,5 +17,8 @@
   ],
   "devDependencies": {
     "font-awesome": "^4.7.0"
+  },
+  "dependencies": {
+    "parsleyjs": "^2.7.0"
   }
 }

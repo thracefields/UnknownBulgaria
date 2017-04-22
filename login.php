@@ -1,12 +1,15 @@
+<?php
+    // if(!isset($_SESSION['name'])) header('Location: login.php');
+?>
 <?php $title = 'Непознатата България / Влез'; ?>
 <?php include('./header.php'); ?>
 
 <p>Вход</p>
-                    <form method="POST" class="pure-form pure-form-aligned" action="login.php">
+                    <form method="POST" class="pure-form pure-form-aligned" action="login.php"  data-parsley-validate>
                        <fieldset>
                             <div class="pure-control-group">
                                 <label for="email">Електронна поща</label>
-                                <input id="email" type="email" name="email" value="">
+                                <input id="email" type="text" name="email" value="" required>
                             </div>
                        </fieldset>
                             
@@ -27,8 +30,10 @@
                             $password = mysqli_real_escape_string($connect, $_POST['password']);
 
                             // Checks
-                            if($password < 6) $errors[] = 'Паролата е прекалено къса.';
-                           if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Електронната поща е неправилна.';
+                            if(empty($email) || empty($password)) {
+                                $_SESSION['errors'][] = 'Всички полета са задължителни.';
+                                
+                            } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $_SESSION['errors'][] = 'Електронната поща е неправилна.';
                         
                             if(!isset($errors)):
                                 $searchQuery = "SELECT * FROM `users` WHERE `email` = '$email'"; 
@@ -41,15 +46,18 @@
                                     $_SESSION['success'] = 'Успешно влязохте.';
                                     header('Location: /');
                                 } else {
-                                    header('Location: error.php');
+                                    $_SESSION['errors'][] = 'Неправилно потребителско име или парола.';
                                 }
                             endif;
                         endif;
                      ?>
-                     <?php if(isset($errors)): ?>
-                        <?php foreach($errors as $error): ?>
-                            <p><?= $error ?></p>
+                     <?php if(isset($_SESSION['errors'])): ?>
+                        <ul>
+                        <?php foreach($_SESSION['errors'] as $error): ?>
+                            <li class="alert alert-danger"><i class="fa fa-exclamation fa-2x" aria-hidden="true"></i><?= $error ?></li>
                         <?php endforeach; ?>
+                        </ul>
+                         <?php session_unset($_SESSION['errors']); ?>
                     <?php endif; ?>
 
 <?php include('./footer.php'); ?>
