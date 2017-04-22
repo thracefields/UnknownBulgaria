@@ -2,9 +2,7 @@
 <?php include('./header.php'); ?>
 
 <p>Вход</p>
-                    <form method="POST" class="pure-form pure-form-aligned" action="http://rodnoto.uchenici.bg/login">
-                        <input type="hidden" name="_token" value="MpvXmh4b5gF0tqQvJYsJ04Cs8AAx1ZPPJAMekGnS">
-
+                    <form method="POST" class="pure-form pure-form-aligned" action="login.php">
                        <fieldset>
                             <div class="pure-control-group">
                                 <label for="email">Електронна поща</label>
@@ -20,8 +18,26 @@
                         </fieldset>
 
                         <fieldset>
-                                <button class="pure-button pure-button-primary" type="submit">Влез</button>
+                                <button class="pure-button pure-button-primary" name="submit" type="submit">Влез</button>
                         </fieldset>
                     </form>
+                    <?php
+                        if(isset($_POST['submit'])):
+                            $mail = mysqli_real_escape_string($connect, $_POST['email']);
+                            $password = mysqli_real_escape_string($connect, $_POST['password']);
+
+                            $searchQuery = "SELECT * FROM `users` WHERE `email` = '$mail'"; 
+                            $search = mysqli_query($connect, $searchQuery);
+                            $a = mysqli_fetch_assoc($search);
+                            if(password_verify($password, $a['password']) && $mail === $a['email']) {
+                                session_start();
+                                $_SESSION['username'] = $username;
+                                header('Location: /');
+                            } else {
+                                header('Location: error.php');
+                            }
+
+                        endif;
+                     ?>
 
 <?php include('./footer.php'); ?>
