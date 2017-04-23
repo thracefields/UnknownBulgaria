@@ -116,7 +116,10 @@ button-success,
             background: rgb(66, 184, 221); /* this is a light blue */
         }
 
-
+main {
+  min-height: 300px;
+  padding: 20px;
+}
 .alert {
     padding: 20px 10px;
     font-style: italic;
@@ -163,4 +166,17 @@ footer {
     padding: 10px;
     text-align: center;
     font-style: italic;
+}
+
+.summary h3 {
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 0;
+}
+.summary p {
+  border-radius: 0 0 20px 20px;
+  margin: 0;
+}
+
+.summary p:hover {
+  opacity: 0.6;
 }

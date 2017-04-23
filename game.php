@@ -1,46 +1,12 @@
+<?php 
+    // if(empty($_SESSION['name']) && empty($_SESSION['is_logged'])) {
+    //     header('Location: login.php');
+    // }
+?>
 <?php $title = 'Непознатата България / Начало'; ?>
 <?php include('./header.php'); ?>
-    <?php if(isset($_SESSION['success'])): ?>
-        <p class="alert alert-success"><i class="fa fa-check fa-2x" aria-hidden="true"></i><?= $_SESSION['success'] ?></p>
-        <?php session_unset($_SESSION['success']); ?>
-    <?php endif; ?>
-    
-    <a href="logout.php">Излез</a>
-    <div class="game-container">
-    
-    
-    </div>
-<?php include('./footer.php'); ?><?php $title = 'Непознатата България / Начало'; ?>
-<?php include('./header.php'); ?>
-    <?php if(isset($_SESSION['success'])): ?>
-        <p class="alert alert-success"><i class="fa fa-check fa-2x" aria-hidden="true"></i><?= $_SESSION['success'] ?></p>
-        <?php session_unset($_SESSION['success']); ?>
-    <?php endif; ?>
-    <a href="logout.php">Излез</a>
-    <div class="game-container">
-    
-    
-    </div>
-<?php include('./footer.php'); ?><?php $title = 'Непознатата България / Начало'; ?>
-<?php include('./header.php'); ?>
-    <?php if(isset($_SESSION['success'])): ?>
-        <p class="alert alert-success"><i class="fa fa-check fa-2x" aria-hidden="true"></i><?= $_SESSION['success'] ?></p>
-        <?php session_unset($_SESSION['success']); ?>
-    <?php endif; ?>
-    <a href="logout.php">Излез</a>
-    <div class="game-container">
-    
-    
-    </div>
-<?php include('./footer.php'); ?><?php $title = 'Непознатата България / Начало'; ?>
-<?php include('./header.php'); ?>
-    <?php if(isset($_SESSION['success'])): ?>
-        <p class="alert alert-success"><i class="fa fa-check fa-2x" aria-hidden="true"></i><?= $_SESSION['success'] ?></p>
-        <?php session_unset($_SESSION['success']); ?>
-    <?php endif; ?>
-    <a href="logout.php">Излез</a>
-    <div class="game-container">
-    
-    
-    </div>
+    <img id="ourmap" src="./assets/images/game-background.png" alt="" usemap="ourmap">
+    <map name="ourmap">
+        <area shape="circle" coords="78, 221, 30" href="sun.htm" alt="Sun">
+    </map>
 <?php include('./footer.php'); ?>
