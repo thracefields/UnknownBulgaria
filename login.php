@@ -1,6 +1,3 @@
-<?php
-    // if(!isset($_SESSION['name'])) header('Location: login.php');
-?>
 <?php $title = 'Непознатата България / Влез'; ?>
 <?php include('./header.php'); ?>
 
@@ -42,6 +39,7 @@
                                 if(password_verify($password, $a['password']) && $email === $a['email']) {
                                     session_start();
                                     $_SESSION['name'] = $a['name'];
+                                    $_SESSION['id'] = $a['id'];
                                     $_SESSION['is_logged'] = 1;
                                     $_SESSION['success'] = 'Успешно влязохте.';
                                     header('Location: /');

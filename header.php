@@ -1,4 +1,5 @@
 <?php include('./config/config.php'); ?>
+<?php include('./classes/ImageUploader.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +19,9 @@
     <link rel="stylesheet" href="./assets/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/vendor/parsley.css">
     <link rel="stylesheet" href="./assets/css/vendor/animate.css">
+    <link rel="stylesheet" href="./assets/css/canvas.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 
-    <!-- JS -->
    
 </head>
 <body>
@@ -41,4 +42,4 @@
         </nav>
         <main>
             <!--<img src="./assets/images/maps-icon.png">-->
-    
+            

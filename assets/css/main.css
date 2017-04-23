@@ -180,3 +180,17 @@ footer {
 .summary p:hover {
   opacity: 0.6;
 }
+
+.avatar {
+  margin-top: 10px;
+  border-radius: 16px;
+  box-shadow: 0 0 6px #000 inset;
+}
+
+textarea {
+  resize: none;
+}
+
+.italic {
+  font-style: italic;
+}

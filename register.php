@@ -19,7 +19,7 @@
                         <fieldset>
                                 <div class="pure-control-group">
                             <label for="password" class="col-md-4 control-label">Парола</label>
-                                <input id="password" data-parsley-min="6" type="password" required class="form-control" name="password">
+                                <input id="password" minlength="6" type="password" required class="form-control" name="password">
 
                                                                 </div>
                             </fieldset>

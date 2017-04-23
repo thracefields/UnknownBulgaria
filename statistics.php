@@ -11,6 +11,7 @@
 
         $highestTriesQuery = mysqli_query($connect, 'SELECT name, tries from users ORDER BY tries DESC LIMIT 1');
         $highestTries = mysqli_fetch_assoc($highestTriesQuery);
+        $_SESSION['highest_score'] = $highestScore;
     ?>
     <div class="summary">
         <h3 class="alert alert-success"><i class="fa fa-trophy fa-3x space" aria-hidden="true"></i>Най-висок резултат</h3>
