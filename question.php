@@ -22,7 +22,7 @@
             $points = 5;
             $userQuery = mysqli_query($connect, "UPDATE users SET score = score + '$points' WHERE `id`= ". $_SESSION['id']);
             if($userQuery) {
-                $_SESSION['success'] = 'Браво! Спечелихте '.$points . ' точки';
+                $_SESSION['success'] = 'Браво! Спечелихте '.$points . ' точки.';
                 header('Location: game.php');
             } 
         } else {

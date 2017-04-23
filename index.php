@@ -35,7 +35,8 @@
                 <p class="alert alert-warning">Брой точки досега: <?= $imageResult['score'] ?>.</p>
             </div>
         </div>
-    <?php endif; ?>
+    <?php else: ?>
     <p class="italic">„Непознатата българия“ има за цел да запознае българите незнайните факти за нашата родина. Родното, милото и драгото тук е на почетно място.</p>
     <p class="italic">Влезте, играйте и опознайте България.</p>
+    <?php endif; ?>
 <?php include('./footer.php'); ?>
