@@ -83,14 +83,45 @@ nav.main-navigation span {
     background-position: center; 
 }
 
-.space {
-    padding: 20px 30px;
+.right {
+  float: right;
 }
 
+.space {
+    padding: 10px;
+}
+
+button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+
+
 .alert {
-    padding: 20px;
+    padding: 20px 10px;
     font-style: italic;
     color: white;
+    opacity: 0.9;
      opacity: 0.83;
     transition: opacity 0.6s;
     margin-bottom: 15px;
@@ -121,7 +152,15 @@ nav.main-navigation span {
 
 .logo:hover {
   animation-name: spin;
-  animation-duration: 1s;
+  animation-duration: 1.6s;
   opacity: 0.8;
 }
 
+footer {  
+    background-color: #465a7a; 
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}

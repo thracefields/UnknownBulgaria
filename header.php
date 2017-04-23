@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= $title ? $title : '' ?></title>
-
+    <link rel="shortcut icon" href="./assets/images/favicon.png">
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
     <!--[if lte IE 8]>
@@ -36,7 +36,7 @@
                  <?php if(isset($_SESSION['name']) && isset($_SESSION['is_logged'])): ?>
                     <li><a href="game.php"><i class="fa fa-flag fa-2x" aria-hidden="true"></i><span>Игрa</span></a></li>
                 <?php endif; ?>
-                <li><a href="#"><i class="fa fa-tags fa-2x" aria-hidden="true"></i><span>Класации</span></a></li>
+                <li><a href="#"><i class="fa fa-tags fa-2x" aria-hidden="true"></i><span>Статистика</span></a></li>
             </ul>
         </nav>
         <main>
